@@ -1,0 +1,134 @@
+.navbar {
+    padding: 1rem 0;
+    transition: padding .4s var(--ease), transform .4s
+}
+
+.nav-shell {
+    max-width: 920px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    padding: .55rem .7rem .55rem 1.25rem;
+    transition: .4s var(--ease)
+}
+
+.navbar.scrolled .nav-shell {
+    background: var(--nav);
+    border-color: var(--line);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .08);
+    backdrop-filter: blur(22px);
+    -webkit-backdrop-filter: blur(22px)
+}
+
+.navbar-brand,
+.footer-brand {
+    font-weight: 800;
+    letter-spacing: -.07em;
+    font-size: 1.25rem
+}
+
+.navbar-brand span,
+.footer-brand span {
+    color: var(--accent)
+}
+
+.navbar-nav {
+    gap: .2rem
+}
+
+.nav-link {
+    position: relative !important;
+    color: var(--muted);
+    font-size: .84rem;
+    font-weight: 600;
+    padding: .55rem .9rem !important;
+    border-radius: 999px;
+    transition: .25s
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--text);
+    background: var(--surface)
+}
+
+.theme-toggle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    color: var(--text);
+    display: grid;
+    place-items: center
+}
+
+.theme-toggle svg {
+    position: absolute;
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    transition: transform .4s, opacity .3s
+}
+
+.moon-icon {
+    opacity: 0;
+    transform: rotate(-40deg) scale(.7)
+}
+
+[data-theme="dark"] .sun-icon {
+    opacity: 0;
+    transform: rotate(40deg) scale(.7)
+}
+
+[data-theme="dark"] .moon-icon {
+    opacity: 1;
+    transform: none
+}
+
+.navbar-toggler {
+    border: 0;
+    padding: .45rem;
+    box-shadow: none !important
+}
+
+.toggler-line {
+    display: block;
+    width: 20px;
+    height: 1.5px;
+    background: var(--text);
+    margin: 5px
+}
+.loader-logo{
+
+    width:70px;
+
+    filter:drop-shadow(0 0 15px rgba(255,255,255,.25));
+
+}
+
+@keyframes logoPulse{
+
+    0%{
+
+        transform:scale(.9);
+        opacity:.6;
+
+    }
+
+    50%{
+
+        transform:scale(1);
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:scale(.9);
+        opacity:.6;
+
+    }
+
+}

@@ -1,0 +1,73 @@
+@media(pointer:fine) {
+
+    body.cursor-ready,
+    body.cursor-ready a,
+    body.cursor-ready button,
+    body.cursor-ready input,
+    body.cursor-ready textarea {
+        cursor: none
+    }
+
+    .cursor-dot,
+    .cursor-ring {
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 4000;
+        opacity: 0
+    }
+
+    .cursor-dot {
+        width: 6px;
+        height: 6px;
+        background: var(--text);
+        transform: translate(-50%, -50%)
+    }
+
+    .cursor-ring {
+        width: 34px;
+        height: 34px;
+        border: 1px solid rgba(var(--accent-rgb), .65);
+        transform: translate(-50%, -50%);
+        transition: width .25s var(--ease), height .25s var(--ease), background .25s, opacity .25s
+    }
+
+    .cursor-ready .cursor-dot,
+    .cursor-ready .cursor-ring {
+        opacity: 1
+    }
+
+    .cursor-ring.hovering {
+        width: 58px;
+        height: 58px;
+        background: rgba(var(--accent-rgb), .1);
+        border-color: rgba(var(--accent-rgb), .35)
+    }
+
+    .cursor-ring.clicking {
+        width: 25px;
+        height: 25px
+    }
+
+    .click-ripple {
+        position: fixed;
+        width: 12px;
+        height: 12px;
+        border: 1px solid var(--accent);
+        border-radius: 50%;
+        pointer-events: none;
+        z-index: 3999;
+        transform: translate(-50%, -50%);
+        animation: ripple .55s ease-out forwards
+    }
+
+    @keyframes ripple {
+        to {
+            width: 70px;
+            height: 70px;
+            opacity: 0
+        }
+    }
+}

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pablo Bernal — Desarrollador de Software y estudiante de Ingeniería Informática de Paraguay.">
+  <meta name="theme-color" content="#fafafa">
+  <title>Pablo Bernal — Desarrollador de Software</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="assets/wolfminimalism.png" type="image/svg+xml">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/about.css">
+  <link rel="stylesheet" href="css/skills.css">
+  <link rel="stylesheet" href="css/projects.css">
+  <link rel="stylesheet" href="css/contact.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/cursor.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+ <div class="page-loader" id="pageLoader" aria-hidden="true">
+
+    <div class="loader-mark">
+
+        <img src="assets/wolfminimalism.png" alt="Pablo Bernal" class="loader-logo">
+
+    </div>
+
+</div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <header>
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav" aria-label="Navegación principal">
+      <div class="container nav-shell">
+        <div class="loader-mark">
+
+        <img src="assets/wolfminimalism.png" alt="Pablo Bernal" class="loader-logo">
+
+    </div>
+
+        <div class="d-flex align-items-center gap-2 order-lg-3">
+          <button class="theme-toggle magnetic" id="themeToggle" type="button" aria-label="Cambiar a modo oscuro">
+            <svg class="sun-icon" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
+            <svg class="moon-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+          </button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Abrir navegación"><span class="toggler-line"></span><span class="toggler-line"></span></button>
+        </div>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarMenu">
+          <ul class="navbar-nav align-items-lg-center">
+            <li class="nav-item"><a class="nav-link active" href="#home">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero d-flex align-items-center" id="home" aria-labelledby="hero-title">
+      <div class="hero-orb orb-one" data-parallax="0.04"></div><div class="hero-orb orb-two" data-parallax="-0.025"></div>
+      <div class="container position-relative">
+        <div class="hero-content mx-auto text-center">
+          <div class="availability-pill hero-animate"><span></span> Disponible para nuevas oportunidades</div>
+          <p class="eyebrow hero-animate">Desarrollador de Software · Paraguay</p>
+          <h1 class="hero-title hero-animate" id="hero-title">Construyo herramientas que<br><span class="gradient-text">resuelven problemas reales</span></h1>
+          <p class="hero-description hero-animate">Soy <strong>Pablo Bernal</strong>, estudiante de Ingeniería Informática y desarrollador enfocado en aplicaciones de escritorio, backend y automatización. Me gusta convertir ideas complejas en software rápido, intuitivo y fácil de usar.</p>
+          <div class="hero-actions hero-animate">
+            <a class="btn btn-primary btn-lg magnetic" href="#projects">Ver proyectos <span aria-hidden="true">↓</span></a>
+            <a class="btn btn-secondary btn-lg magnetic" href="assets/CV-PB.png" download>Descargar CV</a>
+          </div>
+          <div class="hero-socials hero-animate" aria-label="Social profiles">
+            <a href="https://github.com/" target="_blank" rel="noopener" class="text-link magnetic">GitHub <span>↗</span></a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="text-link magnetic">LinkedIn <span>↗</span></a>
+          </div>
+        </div>
+        <div class="hero-visual reveal" data-parallax="0.018" aria-label="Ilustración de una interfaz de código">
+          <div class="visual-topbar"><div class="window-dots"><i></i><i></i><i></i></div><span>Desarrollando ahora</span><div class="live-clock" id="liveClock" aria-label="Hora local"></div></div>
+          <div class="visual-body">
+            <aside class="visual-sidebar"><span class="active"></span><span></span><span></span><span></span></aside>
+            <div class="visual-code"><p><i>01</i><span class="code-purple">const</span> desarrollador = {</p><p><i>02</i>&nbsp;&nbsp;nombre: <span class="code-blue">'Pablo Bernal'</span>,</p><p><i>03</i>&nbsp;&nbsp;enfoque: [<span class="code-blue">'calidad'</span>, <span class="code-blue">'sistemas'</span>],</p><p><i>04</i>&nbsp;&nbsp;ubicación: <span class="code-blue">'Paraguay'</span>,</p><p><i>05</i>&nbsp;&nbsp;curioso: <span class="code-purple">true</span></p><p><i>06</i>};</p></div>
+            <div class="status-card"><span class="status-icon">✓</span><div><strong>Compilación exitosa</strong><small>Listo para generar impacto</small></div></div>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#about" aria-label="Ir a Sobre mí"><span></span>Desliza para explorar</a>
+      </div>
+    </section>
+
+    <section class="section about" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-heading reveal"><p class="eyebrow">01 · Sobre mí</p><h2 id="about-title">Transformo ideas en<br><span class="text-muted-custom">software confiable.</span></h2></div>
+        <div class="row g-4 align-items-stretch">
+          <div class="col-lg-7 reveal"><article class="about-story h-100"><div class="loader-mark">
+
+              <img src="assets/wolfminimalism.png" alt="Pablo Bernal" class="loader-logo">
+
+          </div>
+          <h3>Curioso por naturaleza.<br>Metódico por práctica.</h3><p>Me apasiona entender cómo funcionan las cosas y encontrar formas de mejorarlas. Disfruto diseñar herramientas que simplifiquen tareas, automaticen procesos y ofrezcan una experiencia clara para el usuario.</p><p>A lo largo de mis proyectos he trabajado con C++, C#, .NET, APIs REST, bases de datos y aplicaciones web, explorando tanto el desarrollo frontend como backend. También tengo experiencia creando herramientas nativas e investigando el funcionamiento interno del software cuando el proyecto lo requiere.</p><p>Siempre busco aprender nuevas tecnologías y enfrentar desafíos que me permitan crecer como desarrollador.</p><div class="signature">Pablo Bernal <span>— Desarrollador de Software</span></div></article></div>
+          <div class="col-lg-5">
+            <div class="row g-4 h-100">
+              <div class="col-6 reveal"><article class="stat-card"><strong class="counter" data-target="15">0</strong><span>Tecnologías<br>en mi repertorio</span></article></div>
+              <div class="col-6 reveal"><article class="stat-card"><strong class="counter" data-target="5">0</strong><span>Áreas principales<br>de proyectos</span></article></div>
+              <div class="col-12 reveal"><article class="principles-card"><p class="eyebrow">Lo que me impulsa</p><ul><li><span>01</span>Resolver problemas con criterio</li><li><span>02</span>Mejora continua</li><li><span>03</span>Software que inspira confianza</li></ul></article></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-heading section-heading-split reveal"><div><p class="eyebrow">02 · Habilidades</p><h2 id="skills-title">Herramientas para convertir<br><span class="text-muted-custom">ideas en productos.</span></h2></div><p>Un repertorio versátil para desarrollo nativo, arquitectura backend y experiencias web de alta calidad.</p></div>
+        <div class="skills-grid">
+          <article class="skill-group reveal"><div class="skill-icon">{ }</div><p class="eyebrow">Lenguajes</p><h3>Desarrollo principal</h3><div class="skill-tags"><span>C#</span><span>C++</span><span>JavaScript</span><span>HTML5</span><span>CSS3</span></div></article>
+          <article class="skill-group reveal"><div class="skill-icon">⌘</div><p class="eyebrow">Frameworks</p><h3>Creación de aplicaciones</h3><div class="skill-tags"><span>.NET</span><span>Bootstrap</span><span>APIs REST</span></div></article>
+          <article class="skill-group reveal"><div class="skill-icon">⌁</div><p class="eyebrow">Datos y despliegue</p><h3>Sistemas confiables</h3><div class="skill-tags"><span>PostgreSQL</span><span>Railway</span><span>Git</span><span>GitHub</span></div></article>
+          <article class="skill-group reveal"><div class="skill-icon">◇</div><p class="eyebrow">Entorno</p><h3>Flujo de trabajo diario</h3><div class="skill-tags"><span>Visual Studio</span><span>VS Code</span><span>WinAPI</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading section-heading-split reveal"><div><p class="eyebrow">03 · Proyectos seleccionados</p><h2 id="projects-title">Creados con propósito.<br><span class="text-muted-custom">Perfeccionados con cuidado.</span></h2></div><p>Proyectos web, sistemas backend y desarrollo nativo para Windows.</p></div>
+        <div class="project-filters reveal" role="group" aria-label="Filtrar proyectos"><button class="filter-btn active" data-filter="all">Todos</button><button class="filter-btn" data-filter="web">Web</button><button class="filter-btn" data-filter="backend">Backend</button><button class="filter-btn" data-filter="desktop">Escritorio</button></div>
+        <div class="row g-4 project-grid">
+          <div class="col-lg-7 project-item reveal" data-category="web"><article class="project-card project-featured"><div class="project-image project-blue"><img src="assets/images/school-system.svg" alt="Interfaz del Sistema de Gestión Escolar" loading="lazy"></div><div class="project-content"><div><span class="project-number">01</span><h3>Sistema de Gestión Escolar</h3><p>Plataforma académica responsiva que reúne registros de estudiantes, cursos y administración diaria en una interfaz clara.</p><div class="tech-list"><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div></div><div class="project-actions"><a href="https://www.figma.com/make/eIJCAXP1tcIhtgAiVK5h4w/Sistema-de-Gesti%C3%B3n-Escolar?code-node-id=0-9&p=f&fullscreen=1" class="btn btn-sm btn-primary magnetic">Ver demo</a><a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost magnetic">Código ↗</a></div></div></article></div>
+          <div class="col-lg-5 project-item reveal" data-category="backend"><article class="project-card"><div class="project-image project-purple"><img src="assets/images/auth-system.svg" alt="Interfaz del Sistema de Autenticación" loading="lazy"></div><div class="project-content"><div><span class="project-number">02</span><h3>Sistema de Autenticación</h3><p>Plataforma segura de autenticación para escritorio con persistencia en PostgreSQL e integración mediante API REST.</p><div class="tech-list"><span>C#</span><span>.NET</span><span>PostgreSQL</span><span>C++</span></div></div><div class="project-actions"><a href="#contact" class="btn btn-sm btn-primary magnetic">Ver demo</a><a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost magnetic">Código ↗</a></div></div></article></div>
+          <div class="col-lg-5 project-item reveal" data-category="desktop"><article class="project-card"><div class="project-image project-warm"><img src="assets/images/desktop-app.svg" alt="Aplicación nativa de productividad" loading="lazy"></div><div class="project-content"><div><span class="project-number">03</span><h3>Aplicaciones de Escritorio</h3><p>Aplicaciones nativas para Windows y .NET, optimizadas para una interacción fluida y un uso cotidiano.</p><div class="tech-list"><span>C#</span><span>.NET</span></div></div><div class="project-actions"><a href="#contact" class="btn btn-sm btn-primary magnetic">Detalles</a><a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost magnetic">Código ↗</a></div></div></article></div>
+          <div class="col-lg-7 project-item reveal" data-category="desktop"><article class="project-card project-featured"><div class="project-image project-dark"><img src="assets/images/native-tools.svg" alt="Interfaz de una herramienta nativa en C++" loading="lazy"></div><div class="project-content"><div><span class="project-number">04</span><h3>Herramientas de Desarrollo Nativo</h3><p>Herramientas nativas en C++ que combinan ingeniería inversa, integración con la API de Windows e interfaces personalizadas para ampliar flujos de software de escritorio.</p><div class="tech-list"><span>C++</span><span>WinAPI</span><span>Ingeniería inversa</span><span>Interfaz nativa</span></div></div><div class="project-actions"><a href="#contact" class="btn btn-sm btn-primary magnetic">Detalles</a><a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost magnetic">Código ↗</a></div></div></article></div>
+          <div class="col-12 project-item reveal" data-category="web"><article class="project-card calculator-project"><div class="project-image project-green"><img src="assets/images/calculator.svg" alt="Vista previa de la Calculadora Web" loading="lazy"></div><div class="project-content"><div><span class="project-number">05</span><h3>Calculadora Web</h3><p>Calculadora básica desarrollada con Bootstrap y JavaScript vanilla. Permite realizar operaciones simples como suma, resta, multiplicación y división.</p><div class="tech-list"><span>HTML</span><span>CSS</span><span>Bootstrap</span><span>JavaScript</span></div></div><div class="project-actions"><a href="calculator.html" class="btn btn-sm btn-primary magnetic">Ver demo</a><a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-sm btn-ghost magnetic">Código ↗</a></div></div></article></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <div class="container"><div class="contact-shell reveal"><div class="row g-0">
+        <div class="col-lg-5 contact-copy"><p class="eyebrow">04 · Contacto</p><h2 id="contact-title">Construyamos algo<br><span class="gradient-text">que valga la pena usar.</span></h2><p>¿Tienes un proyecto, una oportunidad o simplemente quieres hablar de software? Mi bandeja está abierta.</p><a class="email-link magnetic" href="mailto:pabloagustinbernal3@gmail.com">pabloagustinbernal3@gmail.com <span>↗</span></a><div class="contact-note"><span></span>Normalmente respondo en 24–48 horas</div></div>
+        <div class="col-lg-7 contact-form-wrap"><form id="contactForm" novalidate><div class="row g-3"><div class="col-md-6"><label for="name" class="form-label">Tu nombre</label><input type="text" class="form-control" id="name" name="name" placeholder="Pablo Bernal" autocomplete="name"><div class="field-error" id="nameError"></div></div><div class="col-md-6"><label for="email" class="form-label">Correo electrónico</label><input type="email" class="form-control" id="email" name="email" placeholder="tu@ejemplo.com" autocomplete="email"><div class="field-error" id="emailError"></div></div><div class="col-12"><label for="message" class="form-label">Tu mensaje</label><textarea class="form-control" id="message" name="message" rows="5" placeholder="Cuéntame un poco sobre tu idea..."></textarea><div class="field-meta"><div class="field-error" id="messageError"></div><small id="charCount">0 / 600</small></div></div><div class="col-12"><button class="btn btn-primary btn-lg w-100 magnetic" type="submit"><span>Enviar mensaje</span><i aria-hidden="true">→</i></button></div></div><div class="form-success" id="formSuccess" role="status"><span>✓</span><div><strong>Mensaje listo para enviar.</strong><p>Se abrirá tu aplicación de correo para completar el envío.</p></div></div></form></div>
+      </div></div></div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><div class="footer-top"><a class="footer-brand magnetic" href="#home"><img src="assets/wolfminimalism.png" alt="Pablo" class="calc-navbar-logo"></a><p>Software creado con criterio<br>desde Paraguay.</p><div class="footer-links"><a href="https://github.com/" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn ↗</a><a href="mailto:pabloagustinbernal3@gmail.com">Correo ↗</a></div></div><div class="footer-bottom"><span>© <span id="currentYear"></span> Pablo Bernal. Todos los derechos reservados.</span><span>Diseñado y desarrollado con intención.</span></div></div></footer>
+
+  <button class="back-to-top magnetic" id="backToTop" type="button" aria-label="Volver arriba">↑</button>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

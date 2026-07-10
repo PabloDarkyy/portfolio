@@ -1,0 +1,160 @@
+@media(max-width:991.98px) {
+    .nav-shell {
+        max-width: calc(100% - 2rem);
+        border-radius: 26px
+    }
+
+    .navbar-collapse {
+        padding: 1rem 0
+    }
+
+    .navbar-nav {
+        align-items: stretch !important
+    }
+
+    .nav-link {
+        text-align: center
+    }
+
+    .section-heading-split {
+        display: block
+    }
+
+    .section-heading-split>p {
+        margin-top: 1.5rem
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 2fr
+    }
+
+    .footer-links {
+        grid-column: 1/-1;
+        align-items: flex-start;
+        flex-direction: row
+    }
+
+    .contact-form-wrap {
+        border-left: 0;
+        border-top: 1px solid var(--line)
+    }
+}
+
+@media(max-width:767.98px) {
+    :root {
+        --radius-xl: 24px;
+        --section-space: 6.5rem
+    }
+
+    .hero {
+        padding-top: 8rem
+    }
+
+    .hero-title {
+        font-size: clamp(3rem, 13vw, 4.7rem)
+    }
+
+    .hero-visual {
+        height: 290px;
+        margin-top: 3.5rem
+    }
+
+    .visual-topbar {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .visual-topbar>span {
+        display: none
+    }
+
+    .visual-code {
+        padding: 1.5rem 1rem;
+        font-size: .67rem
+    }
+
+    .visual-sidebar {
+        width: 42px
+    }
+
+    .status-card {
+        right: 1rem;
+        bottom: 1rem
+    }
+
+    .project-image {
+        height: 260px;
+        padding: 1rem
+    }
+
+    .project-content {
+        min-height: 320px
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr
+    }
+
+    .footer-links {
+        grid-column: auto
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: .6rem
+    }
+
+    .about-story,
+    .stat-card,
+    .principles-card {
+        padding: 1.6rem
+    }
+
+    .about-story .profile-mark {
+        margin-bottom: 2rem
+    }
+}
+
+@media(max-width:430px) {
+    .hero-actions .btn {
+        width: 100%
+    }
+
+    .hero-socials {
+        gap: 1rem
+    }
+
+    .visual-code {
+        font-size: .57rem;
+        padding-left: .7rem
+    }
+
+    .visual-code i {
+        width: 25px
+    }
+
+    .status-card {
+        display: none
+    }
+
+    .project-actions {
+        flex-wrap: wrap
+    }
+
+    .project-filters {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        padding-bottom: .4rem
+    }
+
+    .filter-btn {
+        white-space: nowrap
+    }
+
+    .footer-links {
+        flex-wrap: wrap
+    }
+}
