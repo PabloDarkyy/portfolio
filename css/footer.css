@@ -1,50 +1,237 @@
 .footer {
-    padding: 5rem 0 2rem;
-    border-top: 1px solid var(--line)
+  padding: 5rem 0 2rem;
+  border-top: 1px solid var(--line);
 }
 
 .footer-top {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    align-items: start;
-    gap: 2rem
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  align-items: start;
+  gap: 2rem;
 }
 
 .footer-brand {
-    font-size: 1.8rem
+  font-size: 1.8rem;
 }
 
 .footer-top p {
-    font-size: clamp(1.4rem, 2.8vw, 2.2rem);
-    line-height: 1.2;
-    letter-spacing: -.04em;
-    margin: 0
+  font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+  line-height: 1.2;
+  letter-spacing: -0.04em;
+  margin: 0;
 }
 
 .footer-links {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: .8rem
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.8rem;
 }
 
 .footer-links a {
-    color: var(--muted);
-    font-size: .8rem;
-    font-weight: 600;
-    transition: .2s
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: 0.2s;
 }
 
 .footer-links a:hover {
-    color: var(--accent)
+  color: var(--accent);
 }
 
 .footer-bottom {
-    display: flex;
-    justify-content: space-between;
-    color: var(--muted);
-    font-size: .68rem;
-    margin-top: 5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--line)
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+  font-size: 0.68rem;
+  margin-top: 5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.footer-philosophy {
+  font-size: clamp(1.4rem, 3vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 1.5rem;
+  line-height: 1.1;
+  min-height: 3.4em;
+}
+
+.footer-philosophy .char,
+.footer-philosophy .dot {
+  display: inline-block;
+  will-change: opacity, transform, filter;
+}
+
+.footer-philosophy .space {
+  display: inline-block;
+  width: 0.28em;
+}
+
+.footer-philosophy.is-breaking .char {
+  animation: charBreak 2.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: var(--delay);
+}
+
+.footer-philosophy.is-entering .char {
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(14px) scale(0.96);
+  animation: charEnter 1.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: var(--delay);
+}
+
+.footer-philosophy .dot {
+  opacity: 0;
+  transform: translateY(8px) scale(0.75);
+}
+
+.footer-philosophy.is-thinking .dot {
+  animation: dotWrite 0.38s ease forwards;
+}
+
+.footer-philosophy.is-thinking .dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.footer-philosophy.is-thinking .dot:nth-child(2) {
+  animation-delay: 0.36s;
+}
+
+.footer-philosophy.is-thinking .dot:nth-child(3) {
+  animation-delay: 0.72s;
+}
+
+.footer-philosophy.is-thinking-again .dot {
+  animation: dotWriteAgain 0.38s ease forwards;
+}
+
+.footer-philosophy.is-thinking-again .dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.footer-philosophy.is-thinking-again .dot:nth-child(2) {
+  animation-delay: 0.36s;
+}
+
+.footer-philosophy.is-thinking-again .dot:nth-child(3) {
+  animation-delay: 0.72s;
+}
+
+
+.footer-philosophy.is-thinking-pause .dot,
+.footer-philosophy.is-thinking-pause-again .dot {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+.footer-philosophy.is-dots-breaking .dot {
+  opacity: 1;
+  animation: dotBreak 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.footer-philosophy.is-dots-fade .dot {
+  opacity: 1;
+  animation: dotFade 0.45s ease forwards;
+}
+.footer-philosophy .word {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.footer-philosophy .space {
+  display: inline-block;
+  width: 0.28em;
+}
+
+@keyframes dotFade {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateY(6px) scale(0.82);
+  }
+}
+@keyframes charBreak {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0, 0) rotate(0deg) scale(1);
+  }
+
+  45% {
+    opacity: 0.75;
+    filter: blur(1px);
+    transform: translate(calc(var(--x) * 0.35), calc(var(--y) * 0.35)) rotate(calc(var(--r) * 0.35)) scale(0.96);
+  }
+
+  100% {
+    opacity: 0;
+    filter: blur(7px);
+    transform: translate(var(--x), var(--y)) rotate(var(--r)) scale(0.6);
+  }
+}
+
+@keyframes charEnter {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(16px) scale(0.94);
+  }
+
+  45% {
+    opacity: 0.55;
+    filter: blur(4px);
+    transform: translateY(7px) scale(0.98);
+  }
+
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes dotWrite {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.75);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes dotWriteAgain {
+  0% {
+    opacity: 0;
+    transform: translateY(8px) scale(0.75);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes dotBreak {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0, 0) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translate(var(--x), var(--y)) rotate(var(--r)) scale(0.45);
+  }
 }

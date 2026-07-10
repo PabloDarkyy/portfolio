@@ -5,6 +5,7 @@ import { initCursor } from './cursor.js';
 import { initForm } from './form.js';
 import { initProjectFilters } from './projects.js';
 import { initClock } from './clock.js';
+import { initFooter } from './footer-philosophy.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
@@ -14,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initForm();
   initProjectFilters();
   initClock();
+  initFooter();
   document.getElementById('currentYear').textContent = new Date().getFullYear();
 });
 
