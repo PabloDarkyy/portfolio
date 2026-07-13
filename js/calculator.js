@@ -1,4 +1,3 @@
-// Expresión escrita por el usuario mediante los botones de la calculadora.
 let expression = '';
 
 const display = document.getElementById('display');
@@ -21,7 +20,6 @@ function clearCalculator() {
 
 function calculateResult() {
   try {
-    // Solo se permiten números, puntos y los cuatro operadores básicos.
     if (!expression || !/^[0-9+\-*/. ]+$/.test(expression)) throw new Error();
     const result = eval(expression);
     if (!Number.isFinite(result)) throw new Error();

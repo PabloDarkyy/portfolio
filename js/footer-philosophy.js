@@ -84,7 +84,7 @@ export function initFooter() {
     const dots = footerPhilosophy.querySelectorAll(".dot");
 
     dots.forEach((dot) => {
-      dot.style.opacity = "0";
+      
       dot.style.transform = "translateY(8px) scale(0.75)";
     });
   }
