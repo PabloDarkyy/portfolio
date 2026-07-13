@@ -5,7 +5,7 @@
     body.cursor-ready button,
     body.cursor-ready input,
     body.cursor-ready textarea {
-        cursor: none
+        cursor: none !important
     }
 
     .cursor-dot,
